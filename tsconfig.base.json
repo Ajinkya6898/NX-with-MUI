@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@login/footer": ["libs/footer/src/index.ts"],
+      "@login/mui-custom-theme": ["libs/mui-custom-theme/src/index.ts"],
+      "@login/navbar": ["libs/navbar/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

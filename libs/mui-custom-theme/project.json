@@ -1,0 +1,24 @@
+{
+  "name": "mui-custom-theme",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/mui-custom-theme/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/mui-custom-theme/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/mui-custom-theme"],
+      "options": {
+        "jestConfig": "libs/mui-custom-theme/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
