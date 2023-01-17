@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useState, useEffect } from 'react';
-import { Box, Typography, TextField, Button } from '@mui/material';
+import { Box, Typography, TextField, Button, Link } from '@mui/material';
 import { Footer } from '@login/footer';
 import { Navbar } from '@login/navbar';
 import Theme from 'libs/mui-custom-theme/src/lib/mui-custom-theme';
@@ -28,7 +28,7 @@ export function App() {
   useEffect(() => {
     axios.get('./assets/State.json').then((res) => setState(res.data));
   }, []);
-  
+
   return (
     <ThemeProvider theme={Theme}>
       <Navbar />
@@ -76,7 +76,7 @@ export function App() {
             </Box>
             <InputField sx={{ backgroundColor: 'white' }} />
           </Box>
-          <Box mt={5}>
+          <Box margin="30px 0 0 32%">
             <Button
               sx={{ fontSize: '14px', lineHeight: '20px' }}
               size="small"
@@ -85,12 +85,9 @@ export function App() {
             >
               Login
             </Button>
-            <Button
-              sx={{ fontSize: '14px', lineHeight: '20px', ml: 3 }}
-              size="small"
-            >
+            <Link href="#" sx={{ fontSize: '16px', ml: 2 }}>
               Forgot Password?
-            </Button>
+            </Link>
           </Box>
         </Box>
         <Box width="80%" margin="auto" mt={-3}>
